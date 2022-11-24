@@ -1,10 +1,9 @@
 import React from 'react';
+import ProductList from './pages/Products';
 
 function App() {
   return (
-    <div>
-      <p>Hello Dunia</p>
-    </div>
+    <ProductList />
   );
 }
 
