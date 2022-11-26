@@ -6,7 +6,7 @@ function About() {
       <div className="about-list m-3 p-0">
         <div className="container-fluid">
           <div className="row">
-            <div className="about-content col-lg-12">
+            <div className="about-content col-12">
               <h3>EwaSons Indonesia - Jual Beli Barang Elektronik Bekas</h3>
               <p>EwaSons (E-waste Solutions) merupakan website yang dapat membantu masyarakat dalam mengelola sampah elektronik. Tujuan dari website EwaSons yaitu untuk meningkatkan kontribusi masyarakat dalam menanggulangi permasalahan sampah elektronik sehingga dapat membantu menjaga lingkungan di sekitar kita.</p>
             </div>
@@ -14,7 +14,7 @@ function About() {
               <h3>Nikmati Mudahnya Jualan Online di EwaSons</h3>
               <p>EwaSons (E-waste Solutions) merupakan salah satu e-commerce di Indonesia yang menawarkan berbagai macam produk elektronik bekas yang berkualitas dan menjadikannya sebagai marketplace yang dapat digunakan masyarakat Indonesia untuk menjual barang-barang elektronik yang sudah tidak terpakai. Tidak hanya itu, kehadiran EwaSons membuat pengalaman belanja online para penggunanya menjadi lebih mudah, aman, dan efisien. Tersedia berbagai fitur dan hasil dari penjualan dapat ditukarkan menjadi uang tunai maupun e-money.</p>
             </div>
-            <div className="about-content col-lg-12">
+            <div className="about-content col-12">
               <h3>Berbagai Pelayanan Menarik Lainnya Hanya di EwaSons</h3>
               <p>Terdapat beberapa layanan yang kami sediakan untuk anda agar mendapatkan pengalaman yang baik selama menggunakan layanan kami, terdapat beberapa alur dalam penggunaan layanan kami yaitu sebagai berikut.</p>
               <ul className="list-group ms-5">

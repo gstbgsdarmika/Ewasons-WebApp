@@ -8,7 +8,7 @@ import product4 from '../assets/img/produk 4.png';
 function CardProduct() {
   return (
     <>
-      <div className="col-lg-3 col-md-4 col-sm-12">
+      <div className="col-12 col-md-4 col-lg-3">
         <div className="product-card my-3">
           <div className="product-img">
             <img className="d-block w-100" src={product1} alt="card-product" />
@@ -20,7 +20,7 @@ function CardProduct() {
           </div>
         </div>
       </div>
-      <div className="col-lg-3 col-md-4 col-sm-12">
+      <div className="col-12 col-md-4 col-lg-3">
         <div className="product-card my-3">
           <div className="product-img">
             <img className="d-block w-100" src={product2} alt="card-product" />
@@ -32,7 +32,7 @@ function CardProduct() {
           </div>
         </div>
       </div>
-      <div className="col-lg-3 col-md-4 col-sm-12">
+      <div className="col-12 col-md-4 col-lg-3">
         <div className="product-card my-3">
           <div className="product-img">
             <img className="d-block w-100" src={product3} alt="card-product" />
@@ -44,7 +44,7 @@ function CardProduct() {
           </div>
         </div>
       </div>
-      <div className="col-lg-3 col-md-4 col-sm-12">
+      <div className="col-12 col-md-4 col-lg-3">
         <div className="product-card my-3">
           <div className="product-img">
             <img className="d-block w-100" src={product4} alt="card-product" />
@@ -56,7 +56,7 @@ function CardProduct() {
           </div>
         </div>
       </div>
-      <div className="col-lg-3 col-md-4 col-sm-12">
+      <div className="col-12 col-md-4 col-lg-3">
         <div className="product-card my-3">
           <div className="product-img">
             <img className="d-block w-100" src={product3} alt="card-product" />
@@ -68,7 +68,7 @@ function CardProduct() {
           </div>
         </div>
       </div>
-      <div className="col-lg-3 col-md-4 col-sm-12">
+      <div className="col-12 col-md-4 col-lg-3">
         <div className="product-card my-3">
           <div className="product-img">
             <img className="d-block w-100" src={product1} alt="card-product" />
@@ -80,7 +80,7 @@ function CardProduct() {
           </div>
         </div>
       </div>
-      <div className="col-lg-3 col-md-4 col-sm-12">
+      <div className="col-12 col-md-4 col-lg-3">
         <div className="product-card my-3">
           <div className="product-img">
             <img className="d-block w-100" src={product4} alt="card-product" />
@@ -92,7 +92,7 @@ function CardProduct() {
           </div>
         </div>
       </div>
-      <div className="col-lg-3 col-md-4 col-sm-12">
+      <div className="col-12 col-md-4 col-lg-3">
         <div className="product-card my-3">
           <div className="product-img">
             <img className="d-block w-100" src={product2} alt="card-product" />

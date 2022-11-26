@@ -1,30 +1,16 @@
-@media screen and (max-width: 576px) {
-
+@media screen and (min-width: 576px) {
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   /* category card */
   .category-card {
-    width: 150px;
-    height: 150px;
-    padding: 10px 20px;
+    padding: 10px 40px;
   }
 
   /* recommendation */
   .header-recommendation {
     font-size: 20px;
     padding: 8px;
-  }
-
-  /* product card */
-  .product-card {
-    width: 210px;
-    height: 240px;
-  }
-
-  .product-card .product-img img {
-    width: 210px;
-    height: 120px;
   }
 
   .product-card .product-info .product-price {
@@ -57,33 +43,12 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-  /* category card */
-  .category-card {
-    width: 215px;
-    height: 200px;
-    padding: 10px 40px;
+@media screen and (min-width: 1024px) {
+  .product-card .product-info .product-price {
+    font-size: 16px;
   }
 
-    /* product card */
-    .product-card {
-      width: 220px;
-      height: 300px;
-    }
-  
-    .product-card .product-img img {
-      width: 220px;
-      height: 180px;
-    }
-  
-    .product-card .product-info .product-price {
-      font-size: 16px;
-    }
-  
-    .recommendation .btn {
-      margin-top: 30px;
-    }
+  .recommendation .btn {
+    margin-top: 30px;
+  }
 }
-
-
-

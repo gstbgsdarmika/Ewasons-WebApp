@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --primary: #254779;
@@ -111,10 +111,28 @@
 .header .btn {
   border-radius: 8px;
   font-size: 14px;
-  background-color: var(--primary);
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
-.header .btn:first-child {
+.header .btn:hover {
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.header .btn2 {
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.header .btn2:hover {
+  border-radius: 8px;
+  font-size: 14px;
   background-color: #fff;
   border: 1px solid var(--primary);
   color: var(--primary);
@@ -185,8 +203,6 @@
   justify-content: center;
   align-items: center;
   padding: 11px 56px;
-  width: 260px;
-  height: 206px;
   border: 1px solid #9FA6B0;
   border-radius: 5px;
 }
@@ -217,16 +233,12 @@
 
 /* product card */
 .product-card {
-  width: 270px;
-  height: 310px;
   background-color: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
 
 .product-card .product-img img{
-  width: 246px;
-  height: 202px;
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -329,4 +341,147 @@
 .footer-left h6 {
   font-size: 14px;
 }
+
+/* register page */
+.register-page {
+  height: 100vh;
+}
+
+.register-input {
+  margin-top: 20px;
+}
+
+.register-left h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.register-left p {
+  font-size: 14px;
+}
+
+.register-left a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight:700;
+}
+
+.register-left .form-label {
+  font-weight: 500;
+}
+
+.register-left .form-control::placeholder{
+  font-size: 16px;
+  color: #666565;
+  font-weight: 300;
+}
+
+.register-right h1 {
+  padding-top: 20px;
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.register-left .btn3 {
+  font-size: 14px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  color: var(--white);
+  width: 80%;
+}
+
+.register-left .btn3:hover{
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.register-left .form-check-label {
+  font-size: 14px;
+}
+
+.register-right p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.register-right .image-register img{
+  width: 100%
+}
+
+
+/* login page */
+.login-page {
+  height: 100vh;
+}
+
+.login-left {
+  margin-top: 100px;
+}
+
+.login-left h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.login-left p {
+  font-size: 14px;
+}
+
+.login-left a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight:700;
+}
+
+.login-left .form-label {
+  font-weight: 500;
+}
+
+.login-left .form-control::placeholder{
+  font-size: 16px;
+  color: #666565;
+  font-weight: 300;
+}
+
+.login-right h1 {
+  padding-top: 20px;
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-left .btn3 {
+  font-size: 14px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  color: var(--white);
+  width: 80%;
+}
+
+.login-left .btn3:hover{
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.login-left .form-check-label {
+  font-size: 14px;
+}
+
+.login-right p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-right .image-login img{
+  width: 100%
+}
+
+
 

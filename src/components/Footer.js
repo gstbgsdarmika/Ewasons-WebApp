@@ -9,11 +9,8 @@ function Footer() {
     <div className="footer mx-3">
       <div className="container-fluid">
         <div className="row">
-          <div className="footer-right col-lg-4 col-md-4">
-            <h1 className="logo2 fw-bold">
-              Ewa
-              <span>Sons</span>
-              <img className="img-ewasons ms-2" src={logo} alt="Logo EwaSons" />
+          <div className="footer-right col-12 col-md-4 col-lg-4">
+            <h1 className="logo2 fw-bold">Ewa<span>Sons</span><img className="img-ewasons ms-2" src={logo} alt="Logo EwaSons" />
             </h1>
             <p>Untuk mendapatkan informasi terbaru tentang kami, Anda dapat mengunjungi akun media sosial kami</p>
             <div className="sosial-media-list d-flex">
@@ -23,9 +20,9 @@ function Footer() {
               <div className="sosial-media me-2"><FaWhatsapp /></div>
             </div>
           </div>
-          <div className="col-lg-6 mt-3 col-md-6 offset-lg-2 offset-md-2 footer-left">
+          <div className="mt-3 col-12 col-md-6 col-lg-6 offset-lg-2 offset-md-2 footer-left">
             <div className="row">
-              <div className="col-lg-4 col-md-4">
+              <div className="col-12 col-lg-4 col-md-4">
                 <h3>Informasi</h3>
                 <h6>Tentang kami</h6>
                 <h6>Toko kantor</h6>
