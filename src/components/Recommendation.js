@@ -6,7 +6,7 @@ function Recommendation() {
     <div className="recommendation mx-4">
       <div className="container-fluid">
         <div className="row justify-content-center align-items-center">
-          <div className="col-lg-12">
+          <div className="col-12">
             <h1 className="header-recommendation">Rekomendasi</h1>
           </div>
         </div>

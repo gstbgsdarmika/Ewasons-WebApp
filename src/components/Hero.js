@@ -7,7 +7,7 @@ function Hero() {
     <div className="hero mx-3">
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-12">
             <Carousel>
               <Carousel.Item>
                 <img className="d-block w-100" src={hero} alt="First slide" />

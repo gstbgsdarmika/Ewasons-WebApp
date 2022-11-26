@@ -7,34 +7,34 @@ import kategory4 from '../assets/img/kategori 4.png';
 function CardCategory() {
   return (
     <>
-      <div className="col-lg-3 col-md-3 col-sm-12">
-        <div className="category-card">
+      <div className="col-12 col-md-3 col-lg-3">
+        <div className="category-card mb-3">
           <div className="category-img">
-            <img className="d-block w-100" src={kategory1} alt="First slide" />
+            <img className="d-block w-100" src={kategory1} alt="gambar kategori" />
           </div>
           <span className="category-name">Laptop</span>
         </div>
       </div>
-      <div className="col-lg-3 col-md-3 col-sm-12">
-        <div className="category-card">
+      <div className="col-12 col-md-3 col-lg-3">
+        <div className="category-card mb-3">
           <div className="category-img">
-            <img className="d-block w-100" src={kategory2} alt="First slide" />
+            <img className="d-block w-100" src={kategory2} alt="gambar kategori" />
           </div>
           <span className="category-name">CPU</span>
         </div>
       </div>
-      <div className="col-lg-3 col-md-3 col-sm-12">
-        <div className="category-card">
+      <div className="col-12 col-md-3 col-lg-3">
+        <div className="category-card mb-3">
           <div className="category-img">
-            <img className="d-block w-100" src={kategory3} alt="First slide" />
+            <img className="d-block w-100" src={kategory3} alt="gambar kategori" />
           </div>
           <span className="category-name">Monitor</span>
         </div>
       </div>
-      <div className="col-lg-3 col-md-3 col-sm-12">
-        <div className="category-card">
+      <div className="col-12 col-md-3 col-lg-3">
+        <div className="category-card mb-3">
           <div className="category-img">
-            <img className="d-block w-100" src={kategory4} alt="First slide" />
+            <img className="d-block w-100" src={kategory4} alt="gambar kategori" />
           </div>
           <span className="category-name">Kulkas</span>
         </div>
