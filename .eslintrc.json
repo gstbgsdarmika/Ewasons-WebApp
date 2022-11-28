@@ -29,6 +29,7 @@
         "react/no-unescaped-entities": 0,
         "import/no-extraneous-dependencies": 0,
         "react/jsx-one-expression-per-line" : "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-props-no-spreading": 0
     }
 }
