@@ -483,5 +483,76 @@
   width: 100%
 }
 
+/* profile page */
+.profile-page {
+  padding-top: 150px;
+  margin-bottom: 100px;
+  height: 100vh;
+}
+
+.profile-page a {
+  color: var(--font);
+}
+
+.user-profile .img-profile img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.user-profile h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.user-profile p {
+  font-size: 12px;
+  color: var(--icon);
+}
+
+.nav .nav-link-profile {
+  font-size: 15px;
+}
+
+.nav .nav-item-profile{
+  font-size: 14px;
+  padding-left: 48px;
+}
+
+.profile-right {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.profile-right h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.profile-right p {
+  font-size: 12px;
+  color: var(--icon);
+}
+
+.profile-right label {
+  font-weight: 500;
+}
+
+.profile-right .btn3 {
+  margin-top: 30px;
+  font-size: 14px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  color: var(--white);
+}
+
+.profile-right .btn3:hover{
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
 
 
