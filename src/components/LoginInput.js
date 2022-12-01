@@ -6,7 +6,7 @@ import image from '../assets/img/bumi.png';
 function LoginInput() {
   return (
     <div className="login-input d-flex">
-      <div className="login-left w-50 h-100">
+      <div className="login-left">
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-md-10 col-lg-8">
             <h1>Selamat datang kembali</h1>
@@ -33,7 +33,7 @@ function LoginInput() {
           </div>
         </div>
       </div>
-      <div className="login-right w-50 h-100">
+      <div className="login-right order-1 ">
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-md-10 col-lg-8">
             <div className="image-login">

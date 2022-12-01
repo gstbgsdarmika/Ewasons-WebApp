@@ -38,6 +38,14 @@
   cursor: pointer;
 }
 
+.logo h1{
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+}
+
 .logo span{
   font-size: 24px;
   font-weight: 700;
@@ -108,6 +116,21 @@
   font-weight: 100;
 }
 
+.item-header-1 .nav-btn {
+  color: #254779;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+}
+
+.item-header-1 .close-menu-nav {
+  display: none;
+}
+
+.item-header-1 .open-menu-nav {
+  display: none;
+}
+
 .header .btn {
   border-radius: 8px;
   font-size: 14px;
@@ -161,6 +184,34 @@
   cursor: pointer;
 }
 
+.dropdown .dropdown-category{
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown .dropdown-category:hover {
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown .dropdown-category:active {
+  background-color: transparent !important;
+}
+
+.dropdown .dropdown-help{
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown .dropdown-help:hover {
+  border: none;
+  background-color: transparent;
+}
+
+.dropdown .dropdown-help:active {
+  background-color: transparent !important;
+}
+
 /* hero */
 .hero {
   padding-top: 150px;
@@ -171,11 +222,42 @@
 }
 
 .carousel .carousel-indicators button{
-  background-color: #254779 ;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
 }
+
+.carousel .carousel-indicators .active button{
+  background-color: var(--primary) !important;
+}
+
+.carousel .carousel-control-prev-icon,.carousel .carousel-control-next-icon {
+  padding: 20px;
+  border-radius: 50%;
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.carousel .carousel-control-prev .carousel-control-prev-icon {
+  position: absolute;
+  left: -20px;
+}
+
+.carousel .carousel-control-next .carousel-control-next-icon {
+  position: absolute;
+  right: -20px;
+}
+
+.carousel .carousel-control-prev span{
+  background-image: url('../assets/img/prev.svg' );
+  background-size: 10px;
+}
+
+.carousel .carousel-control-next span{
+  background-image: url('../assets/img/next.svg' );
+  background-size: 10px;
+}
+
 
 /* category */
 .category-content {
@@ -351,6 +433,11 @@
   margin-top: 20px;
 }
 
+.register-left {
+  width: 50%;
+  height: 100%;
+}
+
 .register-left h1 {
   font-size: 24px;
   font-weight: 600;
@@ -375,6 +462,11 @@
   font-size: 16px;
   color: #666565;
   font-weight: 300;
+}
+
+.register-right {
+  width: 50%;
+  height: 100%;
 }
 
 .register-right h1 {
@@ -420,6 +512,8 @@
 
 .login-left {
   margin-top: 100px;
+  width: 50%;
+  height: 100%;
 }
 
 .login-left h1 {
@@ -448,14 +542,6 @@
   font-weight: 300;
 }
 
-.login-right h1 {
-  padding-top: 20px;
-  font-size: 20px;
-  color: var(--primary);
-  font-weight: 700;
-  text-align: center;
-}
-
 .login-left .btn3 {
   font-size: 14px;
   background-color: var(--primary);
@@ -472,6 +558,19 @@
 
 .login-left .form-check-label {
   font-size: 14px;
+}
+
+.login-right {
+  width: 50%;
+  height: 100%;
+}
+
+.login-right h1 {
+  padding-top: 20px;
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: 700;
+  text-align: center;
 }
 
 .login-right p {

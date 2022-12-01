@@ -1,4 +1,67 @@
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 575.98px) {
+  .item-header-1  {
+    position: relative;
+  }
+
+  .item-header-1 .logo h1{
+    display: none;
+  }
+
+  .item-header-1 .logo .img-ewasons {
+    display: none;
+  }
+
+  .item-header-1 .wrap-search {
+    position: absolute;
+    width: 65%;
+  }
+
+  .item-header-1 .wrap-search .wrap-icon-search {
+    background-color: #f3f4f5;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 15%;
+    text-align: center;
+  }
+
+  .item-header-1 .wrap-icon-shop svg{
+    margin-right: 30px;
+    font-size: 26px;
+  }
+
+  .item-header-1 .line {
+    display: none ;
+  }
+
+  .item-header-1 .authentication-button button{
+    display: none;
+  }
+
+  .hero {
+    display: none;
+  }
+
+  .category-content {
+    padding-top: 150px;
+  }
+
+  /* login page */
+  .login-left {
+    width: 100%;
+  }
+
+  .login-right {
+    display: none;
+  }
+
+  .register-left {
+    width: 100%;
+  }
+
+  .register-right {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
