@@ -11,7 +11,6 @@ function ProductList({ products }) {
   //     setInitializing(false);
   //   });
   // }, [category]);
-  // console.log(products);
   return (
     <div className="recommendation mx-4">
       <div className="container-fluid">
@@ -20,6 +19,7 @@ function ProductList({ products }) {
             products.map((product) => (
               <CardProduct
                 key={product._id}
+                id={product._id}
                 name={product.name}
                 image={product.image}
                 price={product.price}
@@ -28,9 +28,6 @@ function ProductList({ products }) {
               />
             ))
           }
-        </div>
-        <div className="d-flex justify-content-center align-items-center">
-          <button type="button" className="btn more">Muat lebih banyak</button>
         </div>
       </div>
     </div>
