@@ -17,7 +17,7 @@ function ProductsPage() {
   // const [products, setProducts] = useState([]);
   useEffect(() => {
     getProducts(category).then(({ data }) => {
-      setProducts(data);
+      setProducts([...data]);
       // setInitializing(false);
     });
   }, [category]);
@@ -25,27 +25,22 @@ function ProductsPage() {
   useEffect(() => {
     if (sort === 'newest') {
       setProducts((prevProducts) => {
-        const newProducts = prevProducts.sort((a, b) => a.createdAt - b.createdAt);
-
-        return newProducts;
+        const newProducts = prevProducts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        return [...newProducts];
+      });
+    } else if (sort === 'asc') {
+      setProducts((prevProducts) => {
+        const newProducts = prevProducts.sort((a, b) => a.price - b.price);
+        return [...newProducts];
       });
     } else if (sort === 'desc') {
       setProducts((prevProducts) => {
-        const newProducts = prevProducts.sort((a, b) => a.price - b.price);
-
-        return newProducts;
-      });
-    } else {
-      setProducts((prevProducts) => {
         const newProducts = prevProducts.sort((a, b) => b.price - a.price);
-
-        return newProducts;
+        return [...newProducts];
       });
     }
     console.log(sort);
-    console.log(products);
   }, [sort]);
-
   // const location = useLocation();
   // const category = location.search.split('=')[1];
   return (
@@ -53,9 +48,10 @@ function ProductsPage() {
       <NavBar />
       <Hero />
       <select className="mx-4 form-select" onChange={(event) => setSort(event.target.value)} aria-label="Default select example">
+        <option hidden disabled selected value> -- select an option -- </option>
         <option value="newest">Terbaru</option>
-        <option value="asc">Harga (asc)</option>
-        <option value="desc">Harga (desc)</option>
+        <option value="asc">Harga (ASC)</option>
+        <option value="desc">Harga (DESC)</option>
       </select>
       <ProductList products={products} />
       <About />

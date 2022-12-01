@@ -1,7 +1,7 @@
 import React from 'react';
 import CardProduct from './CardProduct';
 
-function Recommendation() {
+function Recommendation({ products }) {
   return (
     <div className="recommendation mx-4">
       <div className="container-fluid">
@@ -11,7 +11,18 @@ function Recommendation() {
           </div>
         </div>
         <div className="row list-recommendation d-flex justify-content-center align-items-center">
-          <CardProduct />
+          {
+            products.map((product) => (
+              <CardProduct
+                key={product._id}
+                name={product.name}
+                image={product.image}
+                price={product.price}
+                rating={product.rating}
+                stock={product.stock}
+              />
+            ))
+          }
         </div>
         <div className="d-flex justify-content-center align-items-center">
           <button type="button" className="btn more">Muat lebih banyak</button>
