@@ -1,7 +1,92 @@
-@media screen and (min-width: 576px) {
+@media screen and (max-width: 575.98px) {
+  .item-header-1 {
+    position: relative;
+  }
+
+  .item-header-1 .logo h1 {
+    display: none;
+  }
+
+  .item-header-1 .logo .img-ewasons {
+    display: none;
+  }
+
+  .item-header-1 .wrap-search {
+    position: absolute;
+    width: 65%;
+  }
+
+  .item-header-1 .wrap-search .wrap-icon-search {
+    width: 15%;
+  }
+
+  .item-header-1 .wrap-icon-shop svg {
+    margin-right: 30px;
+    font-size: 26px;
+  }
+
+  .item-header-1 .line {
+    display: none;
+  }
+
+  .item-header-1 .authentication-button button {
+    display: none;
+  }
+
+  .hero {
+    display: none;
+  }
+
+  .category-content {
+    padding-top: 150px;
+  }
+
+  /* login page */
+  .login-left {
+    width: 100%;
+  }
+
+  .login-right {
+    display: none;
+  }
+
+  /* register page */
+  .register-left {
+    width: 100%;
+  }
+
+  .register-right {
+    display: none;
+  }
+
+  /* page not found */
+  .page-not-found .content {
+    padding: 0;
+  }
+
+  .page-not-found .content h1 {
+    font-size: 16px;
+  }
+
+  .page-not-found .content p {
+    font-size: 12px;
+  }
+
+  .page-not-found .content .notefoundimage {
+    margin-top: 120px;
+  }
+
+  .page-not-found .btn-back {
+    font-size: 12px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  /* navbar */
+  .item-header-1 .wrap-search .wrap-icon-search {
+    width: 15%;
+  }
+
   /* category card */
   .category-card {
     padding: 10px 40px;
@@ -41,6 +126,27 @@
   .footer-left h6 {
     font-size: 12px;
   }
+
+  /* page not found */
+  .page-not-found .content {
+    padding: 150px;
+  }
+
+  .page-not-found .content h1 {
+    font-size: 24px;
+  }
+
+  .page-not-found .content p {
+    font-size: 14px;
+  }
+
+  .page-not-found .content .notefoundimage img {
+    width: 250px;
+  }
+
+  .page-not-found .content .btn-back {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -51,4 +157,32 @@
   .recommendation .btn {
     margin-top: 30px;
   }
+
+  /* page not found */
+  .page-not-found {
+    height: 100vh;
+  }
+
+  .page-not-found .content {
+    padding: 150px;
+  }
+
+  .page-not-found .content h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .page-not-found .content p {
+    font-size: 20px;
+  }
+
+  .page-not-found .content .notefoundimage img {
+    width: 344px;
+  }
+
+  .page-not-found .content .btn-back {
+    font-size: 18px;
+    border-radius: 15px;
+  }
 }
+

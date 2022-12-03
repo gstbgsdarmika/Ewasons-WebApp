@@ -6,7 +6,7 @@ import image from '../assets/img/bumi.png';
 function RegisterInput() {
   return (
     <div className="register-input d-flex">
-      <div className="register-left w-50 h-100">
+      <div className="register-left">
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-md-10 col-lg-8">
             <h1>Buat akun baru</h1>
@@ -37,7 +37,7 @@ function RegisterInput() {
           </div>
         </div>
       </div>
-      <div className="register-right w-50 h-100">
+      <div className="register-right">
         <div className="row justify-content-center align-items-center">
           <div className="col-12 col-md-10 col-lg-8">
             <div className="image-register">

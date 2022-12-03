@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import HomePage from './pages/HomePage';
+import NotFoundPage from './pages/NotFoundPage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import ProductsPage from './pages/ProductsPage';
@@ -69,6 +70,7 @@ function App() {
           <Route path="/cart" element={<RequireAuth authedUser={authedUser} />}>
             <Route path="/cart" element={<CartPage />} />
           </Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
     </div>
