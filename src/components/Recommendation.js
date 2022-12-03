@@ -15,6 +15,7 @@ function Recommendation({ products }) {
             products.map((product) => (
               <CardProduct
                 key={product._id}
+                id={product._id}
                 name={product.name}
                 image={product.image}
                 price={product.price}

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // import { useLocation } from 'react-router';
 import { useSearchParams } from 'react-router-dom';
-import NavBar from '../components/NavBar';
 import Hero from '../components/Hero';
 import ProductList from '../components/ProductList';
 import About from '../components/About';
@@ -45,7 +44,6 @@ function ProductsPage() {
   // const category = location.search.split('=')[1];
   return (
     <section className="homepage">
-      <NavBar />
       <Hero />
       <select className="mx-4 form-select" onChange={(event) => setSort(event.target.value)} aria-label="Default select example">
         <option hidden disabled selected value> -- select an option -- </option>
