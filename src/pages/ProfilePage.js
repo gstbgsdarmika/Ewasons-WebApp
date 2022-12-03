@@ -6,14 +6,12 @@ import {
   FaUserAlt, FaBell, FaClipboardList, FaRegEdit,
 } from 'react-icons/fa';
 import { FiLogOut } from 'react-icons/fi';
-import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import user from '../assets/img/user.jpg';
 
 function ProfilePage() {
   return (
     <>
-      <NavBar />
       <div className="profile-page mx-3">
         <div className="container-fluid">
           <div className="row">

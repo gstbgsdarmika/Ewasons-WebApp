@@ -1,15 +1,22 @@
 import React from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
 import { Rating } from 'react-simple-star-rating';
+import { addProduct } from '../redux/cartRedux';
 
 function ProductDetail({ product, quantity, setQuantity }) {
-  const handleQuantity = (type) => {
+  const dispatch = useDispatch();
+  function handleQuantityButton(type) {
     if (type === 'dec') {
       if (quantity > 1) setQuantity(quantity - 1);
     } else if (type === 'inc') {
       if (quantity < product.stock) setQuantity(quantity + 1);
     }
-  };
+  }
+
+  function handleAddToCartButton() {
+    dispatch(addProduct({ ...product, quantity }));
+  }
 
   return (
     <div className="card-detail">
@@ -43,15 +50,16 @@ function ProductDetail({ product, quantity, setQuantity }) {
             <div className="quantity-form">
               <div className="input-group">
                 <div className="input-group-btn">
-                  <button aria-label="Decrease Button" type="button" className="btn-default" onClick={() => handleQuantity('dec')}><FaMinus /></button>
+                  <button aria-label="Decrease Button" type="button" className="btn-default" onClick={() => handleQuantityButton('dec')}><FaMinus /></button>
                 </div>
                 <input type="text" id="myNumber" className="form-control input-number" value={quantity} />
                 <div className="input-group-btn">
-                  <button aria-label="Increase Button" type="button" className="btn-default" onClick={() => handleQuantity('inc')}><FaPlus /></button>
+                  <button aria-label="Increase Button" type="button" className="btn-default" onClick={() => handleQuantityButton('inc')}><FaPlus /></button>
                 </div>
               </div>
             </div>
             {/* <button type="button" className="btn">Beli Sekarang</button> */}
+            <button type="button" className="btn" onClick={handleAddToCartButton}>Tambah ke Keranjang</button>
             <button type="button" className="btn">Tambah ke Keranjang</button>
           </div>
         </div>

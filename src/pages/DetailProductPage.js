@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import NavBar from '../components/NavBar';
 import ProductDetail from '../components/ProductDetail';
 import { getProduct } from '../utils/api';
 
@@ -16,12 +15,8 @@ function DetailProductPage() {
     });
   }, [id]);
 
-  console.log(id);
-  console.log(product);
-
   return (
     <div>
-      <NavBar />
       <ProductDetail product={product} quantity={quantity} setQuantity={setQuantity} />
     </div>
   );

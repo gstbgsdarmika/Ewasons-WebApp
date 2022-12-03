@@ -3,11 +3,15 @@ import {
   FaSearch, FaShoppingCart, FaList, FaBars, FaTimes,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Dropdown from 'react-bootstrap/Dropdown';
 import logo from '../assets/img/logo.svg';
 import indonesia from '../assets/img/indonesia.png';
 
-function NavBar() {
+function NavBar({ authedUser }) {
+  const cartQuantity = useSelector((state) => state.cart.quantity);
+
+  console.log(cartQuantity);
   return (
     <div className="header">
       <div className="container-fluid">
@@ -22,14 +26,34 @@ function NavBar() {
                 <input type="text" className="form-control" placeholder="Cari barang di EwaSons" data-toggle="modal" data-target="#exampleModal" />
                 <div className="wrap-icon-search icon-search"><FaSearch /></div>
               </div>
-              <div className="wrap-icon-shop mx-3 icon-shop"><FaShoppingCart /></div>
+              <Link to="/cart">
+                <div className="wrap-icon-shop mx-3 icon-shop position-relative">
+                  <FaShoppingCart />
+                  {cartQuantity
+                    ? <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-info">{cartQuantity}</span>
+                    : <span />}
+                </div>
+              </Link>
               <span className="me-3 line">|</span>
-              <div className="authentication-button d-flex">
-                <Link to="/login"><button type="button" className="btn fw-bold me-3">Masuk</button></Link>
-                <Link to="/register"><button type="button" className="btn btn2 fw-bold">Daftar</button></Link>
-                <button type="button" aria-label="humburger-menu" className="nav-btn close-menu-nav"><FaTimes /></button>
-              </div>
-              <button type="button" aria-label="humburger-menu" className="nav-btn open-menu-nav"><FaBars /></button>
+              {authedUser
+                ? (
+                  <Link to="/profile">
+                    <div>
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                        className="img-fluid rounded-circle"
+                        style={{ width: '45px' }}
+                        alt="Avatar"
+                      />
+                    </div>
+                  </Link>
+                )
+                : (
+                  <div className="d-flex">
+                    <Link to="/login"><button type="button" className="btn fw-bold me-3">Masuk</button></Link>
+                    <Link to="/register"><button type="button" className="btn btn2 fw-bold">Daftar</button></Link>
+                  </div>
+                )}
             </div>
           </div>
         </div>
