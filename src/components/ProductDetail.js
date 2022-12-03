@@ -52,7 +52,7 @@ function ProductDetail({ product, quantity, setQuantity }) {
               </div>
             </div>
             {/* <button type="button" className="btn">Beli Sekarang</button> */}
-            <button type="button" className="btn" onClick={}>Tambah ke Keranjang</button>
+            <button type="button" className="btn">Tambah ke Keranjang</button>
           </div>
         </div>
       </div>

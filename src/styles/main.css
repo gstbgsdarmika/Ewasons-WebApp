@@ -764,3 +764,37 @@
   color: var(--white);
   background-color: var(--primary-hover);
 }
+
+/* page not found */
+.page-not-found {
+  height: 100vh;
+}
+
+.page-not-found .content {
+  padding: 150px;
+}
+
+.page-not-found .content h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.page-not-found .content p {
+  font-size: 20px;
+  color: var(--icon);
+  font-weight: 300;
+}
+
+.page-not-found .content .notefoundimage img{
+  width: 90%;
+}
+
+.page-not-found .content .btn-back {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+  padding: 8px 45px;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 15px;
+}
