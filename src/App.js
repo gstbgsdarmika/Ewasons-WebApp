@@ -15,6 +15,7 @@ import CartPage from './pages/CartPage';
 import RequireAuth from './pages/RequireAuth';
 import RequireLogout from './pages/RequireLogout';
 import NavBar from './components/NavBar';
+import Coba from './pages/Coba';
 
 function App() {
   const authedUser = useSelector((state) => state.user.currentUser);
@@ -71,6 +72,7 @@ function App() {
             <Route path="/cart" element={<CartPage />} />
           </Route>
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/coba" element={<Coba />} />
         </Routes>
       </main>
     </div>

@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  FaSearch, FaShoppingCart, FaList, FaBars, FaTimes,
-} from 'react-icons/fa';
+import { FaSearch, FaShoppingCart, FaList } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Dropdown from 'react-bootstrap/Dropdown';

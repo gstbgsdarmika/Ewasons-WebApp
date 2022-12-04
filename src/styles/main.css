@@ -821,7 +821,7 @@ input[type=number] {
 .cart-item__detail p {
   margin: 0px;
 }
-=======
+
 /* page not found */
 .page-not-found {
   height: 100vh;
@@ -854,4 +854,49 @@ input[type=number] {
   background-color: var(--primary);
   border: none;
   border-radius: 15px;
+}
+
+/* PaymentSuccess */
+.coba {
+  padding: 200px 0;
+  margin: 0 auto;
+}
+
+.modal-content {
+  padding: 10px;
+}
+
+.content .content-right h1{
+  font-weight: 700;
+}
+
+.content .content-right h3{
+  color: var(--icon);
+}
+
+.content .content-right h4{
+  color: var(--icon);
+}
+
+.content .content-right .total{
+  font-weight: 700;
+  color: var(--font);
+}
+
+.content .content-right .line {
+  border-bottom: 1px dashed #9FA6B0;
+}
+
+.modal-content .modal-header {
+  border: none;
+}
+
+.modal-content .modal-header .btn-close {
+  background-color: var(--white);
+  border-radius: 50%;
+  border: 3px solid var(--primary-hover);
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  opacity: 100%;
 }
