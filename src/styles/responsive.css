@@ -218,12 +218,46 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .item-header-1 .wrap-search .wrap-icon-search {
+    width: 5%;
+  }
+
   .product-card .product-info .product-price {
     font-size: 16px;
   }
 
   .recommendation .btn {
     margin-top: 30px;
+  }
+
+  /* footer */
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer-right .logo2 {
+    font-size: 32px;
+  }
+
+  .footer-right p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .footer-right .sosial-media {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  .footer-left h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .footer-left h6 {
+    font-size: 14px;
   }
 
   /* page not found */

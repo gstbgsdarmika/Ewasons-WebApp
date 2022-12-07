@@ -606,7 +606,7 @@
 }
 
 .user-profile p {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--icon);
 }
 
@@ -633,7 +633,7 @@
 }
 
 .profile-right p {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--icon);
 }
 
@@ -804,14 +804,14 @@
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+input::-webkit-inner-spin-button { 
+  --webkit-appearance: none;
   margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+  --moz-appearance: textfield;
 }
 
 #form1 {
@@ -899,4 +899,398 @@ input[type=number] {
   right: -20px;
   top: -20px;
   opacity: 100%;
+}
+
+/* Sidebar */
+.sidebar nav {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  height: 100vh;
+}
+
+/* Profile Admin Page */
+.profile-admin {
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+.profile-right {
+  background-color: var(--white);
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.profile-right h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.profile-right p {
+  font-size: 14px;
+  color: var(--icon);
+}
+
+.profile-right label {
+  font-weight: 500;
+}
+
+.profile-right .btn3 {
+  margin-top: 30px;
+  font-size: 14px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  color: var(--white);
+}
+
+.profile-right .btn3:hover{
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Add Product Page */
+.add-product {
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+.product-input {
+  background-color: var(--white);
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-input {
+  margin-bottom: 30px;
+}
+
+.product-input h1{
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.product-input  p {
+  font-size: 14px;
+  color: var(--font);
+  margin-bottom: 30px;
+}
+
+.form-input .form-label {
+  font-weight: 500;
+}
+
+.form-input .btn3 {
+  margin-top: 30px;
+  font-size: 14px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  color: var(--white);
+}
+
+.form-input .btn3:hover{
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Admin Product Page*/
+.admin-product {
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+.list-product table {
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+td img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Change Password Page */
+.change-password {
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+.change-password-input  {
+  background-color: var(--white);
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.change-password-input h1{
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.change-password-input p {
+  font-size: 14px;
+  color: var(--icon);
+  margin-bottom: 30px;
+}
+
+.form-input .form-label {
+  font-weight: 500;
+}
+
+.form-input .btn3 {
+  margin-top: 30px;
+  font-size: 14px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  color: var(--white);
+}
+
+.form-input .btn3:hover{
+  background-color: #fff;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Address Page */
+.address-page {
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+.address-input {
+  background-color: var(--white);
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.address-input .header-address {
+  padding: 30px;
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.address-input .header-address h1{
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.address-input .header-address button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  border: 1px solid transparent;
+  color: var(--white);
+}
+
+.address-input .main-address {
+  padding: 30px;
+}
+
+.address-input .main-address h1{
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.main-address  h1{
+  font-size: 20px;
+  color: var(--icon);
+  font-weight: 400;
+}
+
+.main-address .card-address {
+  border-bottom: 1px solid var(--icon);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.main-address .address-user h2{
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.main-address .address-user span{
+  font-size: 14px;
+  color: var(--icon);
+  font-weight: 400;
+}
+
+.main-address .address-user h3{
+  font-size: 16px;
+  color: var(--icon);
+  font-weight: 400;
+}
+
+.main-address .address-user .active {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.main-address .address-user button {
+  background-color: transparent;
+  border: 1px solid var(--icon);
+  color: var(--icon);
+}
+
+.main-address .address-map h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.main-address .address-map button {
+  background-color: transparent;
+  border: 1px solid var(--icon);
+  color: var(--icon);
+}
+
+/* Product State Page */
+.product-state-page {
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+.product-state {
+  padding: 30px;
+  background-color: var(--white);
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-state .product-state-header {
+  border-bottom: 1px solid var(--icon);
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.product-state-header h1{
+  font-size: 18px;
+  color: var(--icon);
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.card-product-state {
+  border-bottom: 1px solid var(--icon);
+  margin-bottom: 20px;
+}
+
+.main-product-state .card-product-state .product-img {
+  width: 120px;
+  height: 120px;
+}
+
+.main-product-state .card-product-state .product-img img {
+  width: 100%;
+}
+
+.main-product-state .card-product-state .product-info h1{
+  font-size: 18px;
+}
+
+.main-product-state .card-product-state .product-info p{
+  font-size: 16px;
+  color: var(--icon);
+  margin: 0;
+}
+
+.main-product-state .card-product-state .action button {
+  background-color: transparent;
+  border: 1px solid var(--icon);
+  color: var(--icon);
+}
+
+/* Promo Product Page */
+.promo-product-page {
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+.promo-product {
+  padding: 30px;
+  background-color: var(--white);
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.promo-product .promo-product-header {
+  border-bottom: 1px solid var(--icon);
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.promo-product-header h1{
+  font-size: 18px;
+  color: var(--icon);
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.card-promo-product {
+  border-bottom: 1px solid var(--icon);
+  margin-bottom: 20px;
+}
+
+.main-promo-product .card-promo-product .product-img {
+  width: 120px;
+  height: 120px;
+}
+
+.main-promo-product .card-promo-product .product-img img {
+  width: 100%;
+}
+
+.main-promo-product .card-promo-product .product-info h1{
+  font-size: 18px;
+}
+
+.main-promo-product .card-promo-product .product-info p{
+  font-size: 16px;
+  color: var(--icon);
+  margin: 0;
+}
+
+.main-promo-product .card-promo-product .action button {
+  background-color: transparent;
+  border: 1px solid var(--icon);
+  color: var(--icon);
+}
+
+
+/* product-appraisal-page */
+.product-appraisal-page {
+  padding-top: 130px;
+  overflow-x: hidden;
+}
+
+.product-appraisal {
+  padding: 30px;
+  margin-top: 20px;
+  height: 100vh;
+}
+
+.product-appraisal .product-appraisal-img {
+  width: 200px;
+  height: 200px;
+}
+
+.product-appraisal .product-appraisal-img img {
+  width: 100%;
 }
