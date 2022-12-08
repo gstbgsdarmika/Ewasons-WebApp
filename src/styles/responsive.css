@@ -79,6 +79,42 @@
   .page-not-found .btn-back {
     font-size: 12px;
   }
+
+  /* PaymentSuccess */
+  .modal-content {
+    padding: 5px;
+  }
+
+  .content .content-left {
+    display: none;
+  }
+
+  .content .content-right h1 {
+    font-size: 16px;
+  }
+
+  .content .content-right h3 {
+    font-size: 14px;
+  }
+
+  .content .content-right h4 {
+    font-size: 14px;
+  }
+
+  .content .content-right .total {
+    font-size: 16px;
+  }
+
+  .content .content-right .line {
+    margin-top: 10px;
+  }
+
+  .modal-content .modal-header .btn-close {
+    width: 10px;
+    height: 10px;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -147,15 +183,81 @@
   .page-not-found .content .btn-back {
     font-size: 14px;
   }
+
+  /* PaymentSuccess */
+  .modal-content {
+    padding: 5px;
+  }
+
+  .content .content-right h1 {
+    font-size: 16px;
+  }
+
+  .content .content-right h3 {
+    font-size: 14px;
+  }
+
+  .content .content-right h4 {
+    font-size: 14px;
+  }
+
+  .content .content-right .total {
+    font-size: 16px;
+  }
+
+  .content .content-right .line {
+    margin-top: 10px;
+  }
+
+  .modal-content .modal-header .btn-close {
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    top: -10px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  .item-header-1 .wrap-search .wrap-icon-search {
+    width: 5%;
+  }
+
   .product-card .product-info .product-price {
     font-size: 16px;
   }
 
   .recommendation .btn {
     margin-top: 30px;
+  }
+
+  /* footer */
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer-right .logo2 {
+    font-size: 32px;
+  }
+
+  .footer-right p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .footer-right .sosial-media {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 50%;
+  }
+
+  .footer-left h3 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .footer-left h6 {
+    font-size: 14px;
   }
 
   /* page not found */
@@ -184,5 +286,26 @@
     font-size: 18px;
     border-radius: 15px;
   }
-}
 
+  /* PaymentSuccess */
+  .content .content-right h1 {
+    font-size: 20px;
+  }
+
+  .content .content-right h3 {
+    font-size: 16px;
+  }
+
+  .content .content-right h4 {
+    font-size: 16px;
+  }
+
+  .content .content-right .total {
+    font-size: 18px;
+  }
+
+  .modal-content .modal-header .btn-close {
+    width: 40px;
+    height: 40px;
+  }
+}
