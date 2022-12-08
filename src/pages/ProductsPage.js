@@ -6,6 +6,7 @@ import ProductList from '../components/ProductList';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import { getProducts } from '../utils/api';
+import NavBar from '../components/NavBar';
 
 function ProductsPage() {
   const [searchParams] = useSearchParams();
@@ -43,18 +44,21 @@ function ProductsPage() {
   // const location = useLocation();
   // const category = location.search.split('=')[1];
   return (
-    <section className="homepage">
-      <Hero />
-      <select className="mx-4 form-select" onChange={(event) => setSort(event.target.value)} aria-label="Default select example">
-        <option hidden disabled selected value> -- select an option -- </option>
-        <option value="newest">Terbaru</option>
-        <option value="asc">Harga (ASC)</option>
-        <option value="desc">Harga (DESC)</option>
-      </select>
-      <ProductList products={products} />
-      <About />
-      <Footer />
-    </section>
+    <>
+      <NavBar />
+      <section className="homepage">
+        <Hero />
+        <select className="mx-4 form-select" onChange={(event) => setSort(event.target.value)} aria-label="Default select example">
+          <option hidden disabled selected value> -- select an option -- </option>
+          <option value="newest">Terbaru</option>
+          <option value="asc">Harga (ASC)</option>
+          <option value="desc">Harga (DESC)</option>
+        </select>
+        <ProductList products={products} />
+        <About />
+        <Footer />
+      </section>
+    </>
   );
 }
 

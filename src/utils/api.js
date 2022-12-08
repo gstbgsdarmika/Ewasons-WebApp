@@ -1,18 +1,25 @@
 // import { loginStart, loginSuccess } from '../redux/userRedux';
 
-import { loginFailure, loginStart, loginSuccess } from '../redux/userRedux';
+import {
+  loginFailure,
+  loginStart,
+  loginSuccess,
+  registerFailure,
+  registerStart,
+  registerSuccess,
+} from '../redux/userRedux';
 
 /* eslint-disable no-alert */
 const BASE_URL = 'https://web-production-7dfe.up.railway.app/api';
-// const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODE5YTNlMzNhZjYyYjhiYmQ1ZThkYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2OTQzODMxNCwiZXhwIjoxNjY5Njk3NTE0fQ.hpYucrsrcEklFeMt54DMVmHvEmw6BZZR6pGSkmH5rR0';
+// const TOKEN = JSON.parse(JSON.parse(localStorage.getItem('persist:root')).user).currentUser.accessToken || '';
 
-// function getAccessToken() {
-//   return localStorage.getItem('accessToken');
-// }
+function getAccessToken() {
+  return localStorage.getItem('accessToken');
+}
 
-// function putAccessToken(accessToken) {
-//   return localStorage.setItem('accessToken', accessToken);
-// }
+function putAccessToken(accessToken) {
+  return localStorage.setItem('accessToken', accessToken);
+}
 
 // async function fetchWithToken(url, options = {}) {
 //   return fetch(url, {
@@ -80,27 +87,6 @@ async function getToken() {
   // return { error: false, data: responseJson.data };
 }
 
-// async function login({ email, password }) {
-//   const response = await fetch(`${BASE_URL}/auth/login`, {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({ email, password }),
-//   });
-
-//   if (response.ok !== true) {
-//     return { error: true, data: null };
-//   }
-//   const responseJson = await response.json();
-//   return { error: false, data: responseJson.accessToken };
-//   // if (responseJson.status !== 'success') {
-//   //   alert(responseJson.message);
-//   //   return { error: true, data: null };
-//   // }
-//   // return { error: false, data: responseJson.data };
-// }
-
 async function login(dispatch, user) {
   dispatch(loginStart());
   const response = await fetch(`${BASE_URL}/auth/login`, {
@@ -110,19 +96,44 @@ async function login(dispatch, user) {
     },
     body: JSON.stringify(user),
   });
+  console.log(response.status);
 
-  if (response.ok !== true) {
+  if (response.status !== 200) {
     dispatch(loginFailure());
-    return { error: true, data: null };
+    const errorStatus = response.status;
+    console.log(errorStatus);
+    return { error: errorStatus, data: null };
   }
   const responseJson = await response.json();
   dispatch(loginSuccess(responseJson));
-  return { error: false, data: responseJson.accessToken };
+  console.log(responseJson);
+  return { error: false, data: responseJson };
   // if (responseJson.status !== 'success') {
   //   alert(responseJson.message);
   //   return { error: true, data: null };
   // }
   // return { error: false, data: responseJson.data };
+}
+
+async function register(dispatch, user) {
+  dispatch(registerStart());
+  const response = await fetch(`${BASE_URL}/auth/register`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(user),
+  });
+
+  if (response.status !== 200) {
+    dispatch(registerFailure());
+    const errorStatus = response.status;
+    return { error: errorStatus, data: null };
+  }
+  const responseJson = await response.json();
+  console.log(responseJson);
+  dispatch(registerSuccess(responseJson));
+  return { error: false, data: responseJson };
 }
 
 async function createTransaction() {
@@ -153,10 +164,6 @@ async function createTransaction() {
   }
 }
 
-// Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
-// window.snap.pay('ec66a542-72d4-4c50-ac06-c09f638b5eb8');
-// customer will be redirected after completing payment pop-up
-
 export {
   getProducts,
   getProduct,
@@ -165,4 +172,7 @@ export {
   getToken,
   createTransaction,
   login,
+  putAccessToken,
+  getAccessToken,
+  register,
 };

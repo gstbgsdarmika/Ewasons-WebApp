@@ -5,6 +5,7 @@ import Recommendation from '../components/Recommendation';
 import About from '../components/About';
 import Footer from '../components/Footer';
 import { getProducts } from '../utils/api';
+import NavBar from '../components/NavBar';
 
 function HomePage() {
   const [products, setProducts] = useState([]);
@@ -17,13 +18,16 @@ function HomePage() {
   }, []);
 
   return (
-    <section className="homepage">
-      <Hero />
-      <Category />
-      <Recommendation products={products} />
-      <About />
-      <Footer />
-    </section>
+    <>
+      <NavBar />
+      <section className="homepage">
+        <Hero />
+        <Category />
+        <Recommendation products={products} />
+        <About />
+        <Footer />
+      </section>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import NavBar from '../components/NavBar';
 import ProductDetail from '../components/ProductDetail';
 import { getProduct } from '../utils/api';
 
@@ -16,9 +17,12 @@ function DetailProductPage() {
   }, [id]);
 
   return (
-    <div>
-      <ProductDetail product={product} quantity={quantity} setQuantity={setQuantity} />
-    </div>
+    <>
+      <NavBar />
+      <div>
+        <ProductDetail product={product} quantity={quantity} setQuantity={setQuantity} />
+      </div>
+    </>
   );
 }
 
