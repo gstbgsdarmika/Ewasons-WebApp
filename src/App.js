@@ -14,7 +14,6 @@ import ProductsPage from './pages/ProductsPage';
 import ProfilePage from './pages/ProfilePage';
 import DetailProductPage from './pages/DetailProductPage';
 import CartPage from './pages/CartPage';
-import NavBar from './components/NavBar';
 import { logoutFailure, logoutStart, logoutSuccess } from './redux/userRedux';
 import { putAccessToken } from './utils/api';
 import IdleTimer from './utils/IdleTimer';
@@ -29,13 +28,12 @@ import ProductStatePage from './pages/ProductStatePage';
 import ProductAppraisalPage from './pages/ProductAppraisalPage';
 import PromoProductPage from './pages/PromoPage';
 
-
 function App() {
   const authedUser = useSelector((state) => state.user.currentUser);
   const isFetchingUser = false;
   const dispatch = useDispatch();
   console.log(isFetchingUser);
-  const [isTimeout, setIsTimeout] = useState(false);
+  const [setIsTimeout] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
