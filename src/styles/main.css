@@ -821,7 +821,6 @@ input[type=number] {
 .cart-item__detail p {
   margin: 0px;
 }
-=======
 /* page not found */
 .page-not-found {
   height: 100vh;
@@ -854,4 +853,19 @@ input[type=number] {
   background-color: var(--primary);
   border: none;
   border-radius: 15px;
+}
+
+.img-profile {
+  width: 35px;
+}
+
+.navbar-logo {
+  text-decoration: none;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

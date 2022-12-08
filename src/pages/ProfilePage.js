@@ -8,10 +8,12 @@ import {
 import { FiLogOut } from 'react-icons/fi';
 import Footer from '../components/Footer';
 import user from '../assets/img/user.jpg';
+import NavBar from '../components/NavBar';
 
-function ProfilePage() {
+function ProfilePage({ logout }) {
   return (
     <>
+      <NavBar />
       <div className="profile-page mx-3">
         <div className="container-fluid">
           <div className="row">
@@ -32,7 +34,7 @@ function ProfilePage() {
                 <Nav.Link eventKey="link-1" className="nav-item-profile">Ubah Password</Nav.Link>
                 <Nav.Link eventKey="link-1" className="nav-link-profile fw-bold"><FaClipboardList className="me-3" />Pesanan Saya</Nav.Link>
                 <Nav.Link eventKey="link-1" className="nav-link-profile fw-bold"><FaBell className="me-3" />Notifikasi</Nav.Link>
-                <Nav.Link eventKey="link-1" className="nav-link-profile fw-bold"><FiLogOut className="me-3" />Keluar</Nav.Link>
+                <Nav.Link onClick={logout} className="nav-link-profile fw-bold"><FiLogOut className="me-3" />Keluar</Nav.Link>
               </Nav>
             </div>
             <div className="col-md-10">
