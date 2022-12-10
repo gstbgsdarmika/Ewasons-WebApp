@@ -33,7 +33,7 @@ function App() {
   const isFetchingUser = false;
   const dispatch = useDispatch();
   console.log(isFetchingUser);
-  const [setIsTimeout] = useState(false);
+  const [IsTimeout, setIsTimeout] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -99,7 +99,7 @@ function App() {
             <Routes>
               <Route path="/" exact element={<HomePage />} />
               <Route path="/profile" element={<ProfilePage logout={onLogout} />} />
-              <Route path="/products" element={<ProductsPage />} />
+              <Route path=" " element={<ProductsPage />} />
               <Route path="/product/:id" element={<DetailProductPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="*" element={<NotFoundPage />} />

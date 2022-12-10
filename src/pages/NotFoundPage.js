@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../components/NavBar';
-import Footer from '../components/Footer';
 import NoteFoundImage from '../assets/img/notfound.png';
 
 function NotFoundPage() {

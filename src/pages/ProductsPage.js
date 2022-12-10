@@ -48,12 +48,21 @@ function ProductsPage() {
       <NavBar />
       <section className="homepage">
         <Hero />
-        <select className="mx-4 form-select" onChange={(event) => setSort(event.target.value)} aria-label="Default select example">
-          <option hidden disabled selected value> -- select an option -- </option>
-          <option value="newest">Terbaru</option>
-          <option value="asc">Harga (ASC)</option>
-          <option value="desc">Harga (DESC)</option>
-        </select>
+        <div className="filters d-flex justify-content-end me-4 mt-4 align-items-center">
+          <p className="m-3 fw-bold">Urutkan :</p>
+          <div className="filters-button">
+            <div className="row">
+              <div className="col">
+                <select className="form-select" onChange={(event) => setSort(event.target.value)} aria-label="Default select example">
+                  <option hidden disabled selected value> Paling Sesuai </option>
+                  <option value="newest">Terbaru</option>
+                  <option value="asc">Harga Terendah</option>
+                  <option value="desc">Harga Tertinggi</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
         <ProductList products={products} />
         <About />
         <Footer />

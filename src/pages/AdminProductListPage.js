@@ -2,19 +2,21 @@ import React from 'react';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 import SideBar from '../components/Sidebar';
 import AdminProductList from '../components/AdminProductList';
+import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 
 function AdminProductListPage() {
   return (
     <>
+      <NavBar />
       <div className="admin-product">
         <div className="row justify-content-between">
-          <div className="col-2 ">
+          <div className="col-12 col-md-12 col-lg-2">
             <ProSidebarProvider>
               <SideBar />
             </ProSidebarProvider>
           </div>
-          <div className="col-9 mx-auto">
+          <div className="col-12 col-md-12 col-lg-9 mx-auto">
             <AdminProductList />
           </div>
         </div>
