@@ -323,6 +323,9 @@
 
 .product-card .product-img img{
   border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 247px;
+  object-fit: cover;
 }
 
 .product-card .product-info {
@@ -1308,4 +1311,14 @@ td img {
 
 .product-appraisal .product-appraisal-img img {
   width: 100%;
+}
+
+.img-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-preview img {
+  width: 200px;
 }

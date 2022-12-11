@@ -30,6 +30,30 @@ async function fetchWithToken(url, options = {}) {
   });
 }
 
+async function getUserProducts(sellerId) {
+  const response = await fetchWithToken(`${BASE_URL}/products/shop/${sellerId}`);
+  if (response.ok !== true) {
+    return { error: true, data: null };
+  }
+  const responseJson = await response.json();
+  return { error: false, data: responseJson };
+}
+
+async function addProductList(product) {
+  const response = await fetchWithToken(`${BASE_URL}/products/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(product),
+  });
+  if (response.ok !== true) {
+    return { error: true, data: null };
+  }
+  const responseJson = await response.json();
+  return { error: false, data: responseJson };
+}
+
 async function getProducts(category) {
   const response = await fetch(
     category
@@ -53,7 +77,7 @@ async function getProduct(id) {
 }
 
 async function getTokenSB(transaction) {
-  const response = await fetch(`${BASE_URL}/teskuy`, {
+  const response = await fetch(`${BASE_URL}/checkoutsb`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -61,90 +85,59 @@ async function getTokenSB(transaction) {
     body: JSON.stringify(transaction),
   });
 
-  console.log(response);
-  console.log(response.status);
-
   if (response.status !== 200) {
     return { error: true, data: null };
   }
   const responseJson = await response.json();
-  console.log(responseJson);
   return { error: false, data: responseJson };
-  // return { error: false, data: responseJson.data };
 }
 
 async function createTransactionSB(body) {
-  // getTokenSB(body).catch((response) => console.log(response));
   const { error, data } = await getTokenSB(body);
-  console.log(data.transactionToken);
   if (!error) {
-    window.snap.pay(data.transactionToken);
+    window.snap.pay(data.transactionToken, {
+      onSuccess(result) {
+        /* You may add your own implementation here */
+        console.log('payment success!');
+        console.log(result);
+      },
+      onPending(result) {
+        /* You may add your own implementation here */
+        console.log('wating your payment!');
+        console.log(result);
+      },
+      onError(result) {
+        /* You may add your own implementation here */
+        console.log('payment failed!');
+        console.log(result);
+      },
+      onClose() {
+        /* You may add your own implementation here */
+        console.log('you closed the popup without finishing the payment');
+      },
+    });
   }
 }
 
-async function getToken() {
-  const response = await fetch(`${BASE_URL}/checkout`);
+async function getToken(transaction) {
+  const response = await fetch(`${BASE_URL}/checkout`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(transaction),
+  });
 
   if (response.status !== 200) {
     return { error: true, data: null };
   }
   const responseJson = await response.json();
-  return responseJson;
-}
-
-async function login(dispatch, user) {
-  dispatch(loginStart());
-  const response = await fetch(`${BASE_URL}/auth/login`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(user),
-  });
-  console.log(response.status);
-
-  if (response.status !== 200) {
-    dispatch(loginFailure());
-    const errorStatus = response.status;
-    console.log(errorStatus);
-    return { error: errorStatus, data: null };
-  }
-  const responseJson = await response.json();
-  dispatch(loginSuccess(responseJson));
-  console.log(responseJson);
-  return { error: false, data: responseJson };
-  // if (responseJson.status !== 'success') {
-  //   alert(responseJson.message);
-  //   return { error: true, data: null };
-  // }
-  // return { error: false, data: responseJson.data };
-}
-
-async function register(dispatch, user) {
-  dispatch(registerStart());
-  const response = await fetch(`${BASE_URL}/auth/register`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(user),
-  });
-
-  if (response.status !== 200) {
-    dispatch(registerFailure());
-    const errorStatus = response.status;
-    return { error: errorStatus, data: null };
-  }
-  const responseJson = await response.json();
-  console.log(responseJson);
-  dispatch(registerSuccess(responseJson));
   return { error: false, data: responseJson };
 }
 
 async function createTransaction() {
   const { error, snapToken } = await getToken();
   if (!error) {
-    console.log(snapToken);
     window.snap.pay(snapToken, {
       onSuccess(result) {
         /* You may add your own implementation here */
@@ -169,9 +162,56 @@ async function createTransaction() {
   }
 }
 
+async function login(dispatch, user) {
+  dispatch(loginStart());
+  const response = await fetch(`${BASE_URL}/auth/login`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(user),
+  });
+
+  if (response.status !== 200) {
+    dispatch(loginFailure());
+    const errorStatus = response.status;
+    return { error: errorStatus, data: null };
+  }
+  const responseJson = await response.json();
+  dispatch(loginSuccess(responseJson));
+  return { error: false, data: responseJson };
+  // if (responseJson.status !== 'success') {
+  //   alert(responseJson.message);
+  //   return { error: true, data: null };
+  // }
+  // return { error: false, data: responseJson.data };
+}
+
+async function register(dispatch, user) {
+  dispatch(registerStart());
+  const response = await fetch(`${BASE_URL}/auth/register`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(user),
+  });
+
+  if (response.status !== 200) {
+    dispatch(registerFailure());
+    const errorStatus = response.status;
+    return { error: errorStatus, data: null };
+  }
+  const responseJson = await response.json();
+  dispatch(registerSuccess(responseJson));
+  return { error: false, data: responseJson };
+}
+
 export {
   getProducts,
   getProduct,
+  getUserProducts,
+  addProductList,
   getTokenSB,
   createTransactionSB,
   getToken,
