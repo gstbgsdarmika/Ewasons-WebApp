@@ -102,7 +102,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/profile" element={<ProfilePage logout={onLogout} />} />
+              <Route path="/profileadmin" element={<ProfilePage logout={onLogout} />} />
               <Route path="/products" element={<ProductsPage />} />
               <Route path="/product/:id" element={<DetailProductPage />} />
               <Route path="/cart" element={<CartPage />} />
