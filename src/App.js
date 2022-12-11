@@ -29,6 +29,7 @@ import AddressPage from './pages/AddressPage';
 import ProductStatePage from './pages/ProductStatePage';
 import ProductAppraisalPage from './pages/ProductAppraisalPage';
 import PromoProductPage from './pages/PromoPage';
+import { resetCart } from './redux/cartRedux';
 
 function App() {
   const authedUser = useSelector((state) => state.user.currentUser);
@@ -64,6 +65,7 @@ function App() {
     putAccessToken('');
     navigate('/login');
     dispatch(logoutSuccess());
+    dispatch(resetCart());
   }
 
   useEffect(() => {

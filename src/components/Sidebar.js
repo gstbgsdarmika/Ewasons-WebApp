@@ -4,11 +4,13 @@ import {
   Sidebar, Menu, MenuItem, SubMenu, useProSidebar,
 } from 'react-pro-sidebar';
 import {
-  FaUserAlt, FaShoppingCart, FaBell, FaStore, FaRegEdit, FaThList,
+  FaUserAlt, FaShoppingCart, FaBell, FaStore, FaThList,
 } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 
 function SideBar() {
   const { toggleSidebar, broken } = useProSidebar();
+  const { isSeller } = useSelector((state) => state.user.currentUser);
 
   return (
     <div className="sidebar">
@@ -25,11 +27,17 @@ function SideBar() {
             <MenuItem routerLink={<Link to="/profileadmin/promo" />}> Promo EwaSons </MenuItem>
             <MenuItem routerLink={<Link to="/profileadmin/productappraisal" />}> Penilaian </MenuItem>
           </SubMenu>
-          <SubMenu icon={<FaStore />} label="Toko Saya">
-            <MenuItem routerLink={<Link to="/profileadmin/addproduct" />}> Tambahkan produk </MenuItem>
-            <MenuItem routerLink={<Link to="/profileadmin/adminproductlist" />}> Daftar produk </MenuItem>
-          </SubMenu>
-          <MenuItem routerLink={<Link to="/" />} icon={<FaRegEdit />}> Keluar </MenuItem>
+          {
+            isSeller ? (
+              <SubMenu icon={<FaStore />} label="Toko Saya">
+                <MenuItem routerLink={<Link to="/profileadmin/addproduct" />}> Tambahkan produk </MenuItem>
+                <MenuItem routerLink={<Link to="/profileadmin/adminproductlist" />}> Daftar produk </MenuItem>
+              </SubMenu>
+
+            ) : (
+              null
+            )
+          }
         </Menu>
       </Sidebar>
       <main style={{ padding: 40 }}>

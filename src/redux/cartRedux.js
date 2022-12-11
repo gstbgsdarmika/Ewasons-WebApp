@@ -12,14 +12,17 @@ const cartSlie = createSlice({
     addProduct: (state, action) => {
       state.products.push(action.payload);
       state.total = state.products.reduce((accumulator, object) => accumulator + (object.price * object.quantity), 0);
-      console.log(`panjang${state.products.length}`);
       state.quantity = state.products.length;
     },
     deleteProduct: (state, action) => {
       state.products.splice(action.payload, 1);
       state.total = state.products.reduce((accumulator, object) => accumulator + (object.price * object.quantity), 0);
-      console.log(`panjang${state.products.length}`);
       state.quantity = state.products.length;
+    },
+    resetCart: (state) => {
+      state.products = [];
+      state.total = 0;
+      state.quantity = 0;
     },
   },
 });
@@ -27,5 +30,6 @@ const cartSlie = createSlice({
 export const {
   addProduct,
   deleteProduct,
+  resetCart,
 } = cartSlie.actions;
 export default cartSlie.reducer;

@@ -2,8 +2,11 @@ import React from 'react';
 import {
   Col, Form, Row, Button,
 } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 
 function EditProfile() {
+  const { username } = useSelector((state) => state.user.currentUser);
+
   return (
     <div className="profile-right mt-4">
       <h1>Profil Saya</h1>
@@ -14,7 +17,7 @@ function EditProfile() {
             Username
           </Form.Label>
           <Col sm="10">
-            <Form.Control plaintext readOnly defaultValue="bgsdarmika" />
+            <Form.Control plaintext readOnly defaultValue={username} />
           </Col>
         </Form.Group>
 

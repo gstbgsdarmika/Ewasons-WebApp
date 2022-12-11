@@ -23,7 +23,6 @@ function LoginInput() {
       { email, password },
     ).then((response) => {
       if (response.error) {
-        console.log(response.error);
         setError(response.error);
       } else {
         putAccessToken(response.data.accessToken);

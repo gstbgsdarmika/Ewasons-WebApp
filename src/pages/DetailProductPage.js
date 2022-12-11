@@ -10,7 +10,6 @@ function DetailProductPage() {
   const [product, setProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
   const [initializing, setInitializing] = useState(true);
-  console.log(quantity);
 
   useEffect(() => {
     getProduct(id).then(({ data }) => {
