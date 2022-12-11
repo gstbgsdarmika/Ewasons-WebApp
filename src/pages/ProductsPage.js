@@ -7,13 +7,15 @@ import About from '../components/About';
 import Footer from '../components/Footer';
 import { getProducts } from '../utils/api';
 import NavBar from '../components/NavBar';
+import SearchBar from '../components/SearchBar';
 
 function ProductsPage() {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [products, setProducts] = useState([]);
   const [sort, setSort] = useState('');
   const [category] = React.useState(() => searchParams.get('category') || '');
   const [initializing, setInitializing] = useState(true);
+  const [keyword, setKeyword] = React.useState(() => searchParams.get('keyword') || '');
 
   useEffect(() => {
     getProducts(category).then(({ data }) => {
@@ -42,6 +44,15 @@ function ProductsPage() {
     setInitializing(false);
   }, [sort]);
 
+  function onKeywordChangeHandler(word) {
+    setKeyword(word);
+    setSearchParams({ word });
+  }
+
+  const filteredProducts = products.filter((product) => product.name.toLowerCase().includes(
+    keyword.toLowerCase(),
+  ));
+
   return (
     <div>
       {
@@ -58,7 +69,8 @@ function ProductsPage() {
             <NavBar />
             <section className="homepage">
               <Hero />
-              <div className="filters d-flex justify-content-end me-4 mt-4 align-items-center">
+              <div className="filters d-flex justify-content-beetween ps-4 pt-2 align-items-center">
+                <SearchBar keyword={keyword} keywordChange={onKeywordChangeHandler} />
                 <p className="m-3 fw-bold">Urutkan :</p>
                 <div className="filters-button">
                   <div className="row">
@@ -73,7 +85,7 @@ function ProductsPage() {
                   </div>
                 </div>
               </div>
-              <ProductList products={products} />
+              <ProductList products={filteredProducts} />
               <About />
               <Footer />
             </section>
@@ -81,7 +93,6 @@ function ProductsPage() {
         )
       }
     </div>
-    
   );
 }
 

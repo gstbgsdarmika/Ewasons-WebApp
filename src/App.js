@@ -28,6 +28,7 @@ import AddressPage from './pages/AddressPage';
 import ProductStatePage from './pages/ProductStatePage';
 import ProductAppraisalPage from './pages/ProductAppraisalPage';
 import PromoProductPage from './pages/PromoPage';
+import { resetCart } from './redux/cartRedux';
 
 function App() {
   const authedUser = useSelector((state) => state.user.currentUser);
@@ -63,6 +64,7 @@ function App() {
     putAccessToken('');
     navigate('/login');
     dispatch(logoutSuccess());
+    dispatch(resetCart());
   }
 
   useEffect(() => {
@@ -99,8 +101,8 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/profile" element={<ProfilePage logout={onLogout} />} />
-              <Route path=" " element={<ProductsPage />} />
+              <Route path="/profile" element={<ProfilePage />} />
+              <Route path="/products" element={<ProductsPage />} />
               <Route path="/product/:id" element={<DetailProductPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="*" element={<NotFoundPage />} />

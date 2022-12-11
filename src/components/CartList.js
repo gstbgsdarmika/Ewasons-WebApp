@@ -10,7 +10,6 @@ function CartList({ cart }) {
   const cartQuantity = useSelector((state) => state.cart.quantity);
 
   function handleDeleteFromCartButton(id) {
-    console.log('run');
     dispatch(deleteProduct(id));
   }
 
