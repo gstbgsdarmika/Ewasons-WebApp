@@ -71,7 +71,7 @@ function NavBar() {
                         </div>
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
-                        <Link className="category-link dropdown-item fw-semibold" to="/profile">Akun Saya</Link>
+                        <Link className="category-link dropdown-item fw-semibold" to="/profileadmin">Akun Saya</Link>
                         <Link className="category-link dropdown-item fw-semibold" to="#/">Pesanan Saya</Link>
                         <button type="button" className="category-link dropdown-item fw-semibold text-danger" onClick={onLogout}>Keluar</button>
                       </Dropdown.Menu>
