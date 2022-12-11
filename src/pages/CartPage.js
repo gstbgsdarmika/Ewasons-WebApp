@@ -8,6 +8,8 @@ import { currencyFormatter } from '../utils/formatterString';
 
 function CartPage() {
   const cart = useSelector((state) => state.cart);
+  const user = useSelector((state) => state.user.currentUser);
+
   return (
     <>
       <NavBar />
@@ -49,7 +51,7 @@ function CartPage() {
                           <p className="mb-2">{currencyFormatter(cart.total)}</p>
                         </div>
 
-                        <button type="button" className="btn-checkout btn btn-info btn-block btn-lg" onClick={createTransactionSB}>
+                        <button type="button" className="btn-checkout btn btn-info btn-block btn-lg" onClick={() => createTransactionSB({ amount: cart.total, email: user.email, username: user.username })}>
                           <div className="d-flex justify-content-between">
                             <span>{currencyFormatter(cart.total)}</span>
                             <span className="button-left">Checkout <span className="button-logo"><FaArrowRight /></span></span>

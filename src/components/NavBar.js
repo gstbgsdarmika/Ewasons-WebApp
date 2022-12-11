@@ -15,7 +15,6 @@ function NavBar() {
   const cartQuantity = useSelector((state) => state.cart.quantity);
   const authedUser = useSelector((state) => state.user.currentUser);
 
-  console.log(cartQuantity);
   return (
     <div className="header">
       <div className="container-fluid">

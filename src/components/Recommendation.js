@@ -27,7 +27,9 @@ function Recommendation({ products }) {
           }
         </div>
         <div className="d-flex justify-content-center align-items-center">
-          <Link to="/products"><button type="button" className="btn more">Muat lebih banyak</button></Link>
+          <Link to="/products">
+            <button type="button" className="btn more">Muat lebih banyak</button>
+          </Link>
         </div>
       </div>
     </div>

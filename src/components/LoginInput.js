@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { DotLoader } from 'react-spinners';
 import image from '../assets/img/bumi.png';
 import useInput from '../hooks/UseInput';
-import { login } from '../utils/api';
+import { login, putAccessToken } from '../utils/api';
 
 function LoginInput() {
   const [email, onEmailChange] = useInput('');
@@ -26,12 +26,11 @@ function LoginInput() {
         console.log(response.error);
         setError(response.error);
       } else {
+        putAccessToken(response.data.accessToken);
         navigate('/');
       }
     });
   };
-
-  console.log(error);
 
   return (
     <div className="login-input d-flex">

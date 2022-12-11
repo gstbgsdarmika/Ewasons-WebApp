@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
 import './styles/main.css';
 import './styles/responsive.css';
@@ -30,10 +31,10 @@ import PromoProductPage from './pages/PromoPage';
 
 function App() {
   const authedUser = useSelector((state) => state.user.currentUser);
-  const isFetchingUser = false;
+  const [initializing, setInitializing] = useState(false);
   const dispatch = useDispatch();
-  console.log(isFetchingUser);
-  const [IsTimeout, setIsTimeout] = useState(false);
+  const [isTimeOut, setIsTimeout] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,8 +60,9 @@ function App() {
     } catch (error) {
       dispatch(logoutFailure());
     }
-    dispatch(logoutSuccess());
+    putAccessToken('');
     navigate('/login');
+    dispatch(logoutSuccess());
   }
 
   useEffect(() => {
@@ -74,7 +76,6 @@ function App() {
         onExpired: () => {
           // do something if expired on load
           setIsTimeout(true);
-          onLogout();
         },
       });
       return () => {
@@ -86,7 +87,7 @@ function App() {
   return (
     <div className="App">
       {
-        isFetchingUser ? (
+        initializing ? (
           <div className="loader">
             <DotLoader
               color="#254779"
@@ -97,7 +98,7 @@ function App() {
         ) : (authedUser ? (
           <main>
             <Routes>
-              <Route path="/" exact element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/profile" element={<ProfilePage logout={onLogout} />} />
               <Route path=" " element={<ProductsPage />} />
               <Route path="/product/:id" element={<DetailProductPage />} />

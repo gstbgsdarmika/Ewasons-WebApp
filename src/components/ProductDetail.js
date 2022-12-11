@@ -6,6 +6,7 @@ import { addProduct } from '../redux/cartRedux';
 
 function ProductDetail({ product, quantity, setQuantity }) {
   const dispatch = useDispatch();
+
   function handleQuantityButton(type) {
     if (type === 'dec') {
       if (quantity > 1) setQuantity(quantity - 1);
@@ -52,15 +53,13 @@ function ProductDetail({ product, quantity, setQuantity }) {
                 <div className="input-group-btn">
                   <button aria-label="Decrease Button" type="button" className="btn-default" onClick={() => handleQuantityButton('dec')}><FaMinus /></button>
                 </div>
-                <input type="text" id="myNumber" className="form-control input-number" value={quantity} />
+                <input type="text" id="myNumber" className="form-control input-number" value={quantity} readOnly />
                 <div className="input-group-btn">
                   <button aria-label="Increase Button" type="button" className="btn-default" onClick={() => handleQuantityButton('inc')}><FaPlus /></button>
                 </div>
               </div>
             </div>
-            {/* <button type="button" className="btn">Beli Sekarang</button> */}
             <button type="button" className="btn" onClick={handleAddToCartButton}>Tambah ke Keranjang</button>
-            <button type="button" className="btn">Tambah ke Keranjang</button>
           </div>
         </div>
       </div>
