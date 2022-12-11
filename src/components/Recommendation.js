@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CardProduct from './CardProduct';
 
 function Recommendation({ products }) {
@@ -26,7 +27,9 @@ function Recommendation({ products }) {
           }
         </div>
         <div className="d-flex justify-content-center align-items-center">
-          <button type="button" className="btn more">Muat lebih banyak</button>
+          <Link to="/products">
+            <button type="button" className="btn more">Muat lebih banyak</button>
+          </Link>
         </div>
       </div>
     </div>

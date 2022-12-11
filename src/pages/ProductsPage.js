@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-// import { useLocation } from 'react-router';
 import { useSearchParams } from 'react-router-dom';
+import { DotLoader } from 'react-spinners';
 import Hero from '../components/Hero';
 import ProductList from '../components/ProductList';
 import About from '../components/About';
@@ -13,12 +13,12 @@ function ProductsPage() {
   const [products, setProducts] = useState([]);
   const [sort, setSort] = useState('');
   const [category] = React.useState(() => searchParams.get('category') || '');
-  // const [initializing, setInitializing] = React.useState(true);
-  // const [products, setProducts] = useState([]);
+  const [initializing, setInitializing] = React.useState(true);
+
   useEffect(() => {
     getProducts(category).then(({ data }) => {
       setProducts([...data]);
-      // setInitializing(false);
+      setInitializing(false);
     });
   }, [category]);
 
@@ -39,26 +39,39 @@ function ProductsPage() {
         return [...newProducts];
       });
     }
-    console.log(sort);
+    setInitializing(false);
   }, [sort]);
-  // const location = useLocation();
-  // const category = location.search.split('=')[1];
+
   return (
-    <>
-      <NavBar />
-      <section className="homepage">
-        <Hero />
-        <select className="mx-4 form-select" onChange={(event) => setSort(event.target.value)} aria-label="Default select example">
-          <option hidden disabled selected value> -- select an option -- </option>
-          <option value="newest">Terbaru</option>
-          <option value="asc">Harga (ASC)</option>
-          <option value="desc">Harga (DESC)</option>
-        </select>
-        <ProductList products={products} />
-        <About />
-        <Footer />
-      </section>
-    </>
+    <div>
+      {
+        initializing ? (
+          <div className="loader">
+            <DotLoader
+              color="#254779"
+              size={70}
+              speedMultiplier={3}
+            />
+          </div>
+        ) : (
+          <>
+            <NavBar />
+            <section className="homepage">
+              <Hero />
+              <select className="mx-4 form-select" defaultValue="" onChange={(event) => setSort(event.target.value)} aria-label="Default select example">
+                <option hidden value=""> -- select an option -- </option>
+                <option value="newest">Terbaru</option>
+                <option value="asc">Harga (ASC)</option>
+                <option value="desc">Harga (DESC)</option>
+              </select>
+              <ProductList products={products} />
+              <About />
+              <Footer />
+            </section>
+          </>
+        )
+      }
+    </div>
   );
 }
 
