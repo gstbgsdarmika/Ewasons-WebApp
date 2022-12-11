@@ -1,16 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Sidebar, Menu, MenuItem, SubMenu,
+  Sidebar, Menu, MenuItem, SubMenu, useProSidebar,
 } from 'react-pro-sidebar';
 import {
-  FaUserAlt, FaShoppingCart, FaBell, FaStore, FaRegEdit,
+  FaUserAlt, FaShoppingCart, FaBell, FaStore, FaRegEdit, FaThList,
 } from 'react-icons/fa';
 
 function SideBar() {
+  const { toggleSidebar, broken } = useProSidebar();
+
   return (
     <div className="sidebar">
-      <Sidebar>
+      <Sidebar customBreakPoint="800px">
         <Menu>
           <SubMenu icon={<FaUserAlt />} label="Akun Saya">
             <MenuItem routerLink={<Link to="/profileadmin" />}> Profil </MenuItem>
@@ -30,6 +32,13 @@ function SideBar() {
           <MenuItem routerLink={<Link to="/" />} icon={<FaRegEdit />}> Keluar </MenuItem>
         </Menu>
       </Sidebar>
+      <main style={{ padding: 40 }}>
+        <div className="sidebar-button">
+          {broken && (
+            <button type="submit" className="sb-button" onClick={() => toggleSidebar()}> <FaThList /> </button>
+          )}
+        </div>
+      </main>
     </div>
   );
 }

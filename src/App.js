@@ -34,6 +34,7 @@ function App() {
   const [initializing, setInitializing] = useState(false);
   const dispatch = useDispatch();
   const [isTimeOut, setIsTimeout] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -99,7 +100,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/profile" element={<ProfilePage logout={onLogout} />} />
-              <Route path="/products" element={<ProductsPage />} />
+              <Route path=" " element={<ProductsPage />} />
               <Route path="/product/:id" element={<DetailProductPage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="*" element={<NotFoundPage />} />

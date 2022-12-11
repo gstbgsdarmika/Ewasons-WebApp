@@ -6,7 +6,7 @@ function CardProduct({
   id, name, image, price, rating, stock,
 }) {
   return (
-    <div className="col-12 col-md-4 col-lg-3">
+    <div className="col-6 col-md-3 col-lg-3">
       <div className="product-card my-3">
         <div className="product-img">
           <img className="d-block w-100" src={image} alt="card-product" />

@@ -42,21 +42,27 @@ function NavBar() {
                           : <span />}
                       </div>
                     </Link>
-                    <Link to="/profile" className="img-profile">
-                      <div>
-                        <img
-                          src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
-                          className=" img-fluid rounded-circle"
-                          style={{ width: '45px' }}
-                          alt="Avatar"
-                        />
-                      </div>
-                    </Link>
+                    <Dropdown>
+                      <Dropdown.Toggle className="dropdown-profile" id="dropdown-basic">
+                        <div className="img-profile">
+                          <img
+                            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                            className=" img-fluid rounded-circle"
+                            alt="Avatar"
+                          />
+                        </div>
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item className="category-link" href="/profile">Akun Saya</Dropdown.Item>
+                        <Dropdown.Item className="category-link" href="#/action-2">Pesanan Saya</Dropdown.Item>
+                        <Dropdown.Item className="category-link" href="#/action-3">Keluar</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
                   </div>
                 )
                 : (
-                  <div className="d-flex ms-5">
-                    <Link to="/login"><button type="button" className="btn fw-bold me-3">Masuk</button></Link>
+                  <div className="auth-button d-flex">
+                    <Link to="/login"><button type="button" className="btn fw-bold me-2">Masuk</button></Link>
                     <Link to="/register"><button type="button" className="btn btn2 fw-bold">Daftar</button></Link>
                   </div>
                 )}
