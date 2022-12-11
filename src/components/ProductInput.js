@@ -31,9 +31,6 @@ function ProductInput() {
     setCategory(event.target.value.split(','));
   };
 
-  console.log(_id);
-  console.log(inputForm);
-
   const handleSubmitButton = (event) => {
     event.preventDefault();
     if (file) {
@@ -41,7 +38,6 @@ function ProductInput() {
       const storage = getStorage(app);
       const storageRef = ref(storage, fileName);
 
-      console.log(file);
       const uploadTask = uploadBytesResumable(storageRef, file);
       uploadTask.on(
         'state_changed',
@@ -78,7 +74,6 @@ function ProductInput() {
 
   const onChangePicture = (e) => {
     if (e.target.files[0]) {
-      console.log('picture: ', e.target.files);
       setFile(e.target.files[0]);
       const reader = new FileReader();
       reader.addEventListener('load', () => {

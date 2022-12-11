@@ -10,6 +10,7 @@ function AdminProductList() {
   const { _id } = useSelector((state) => state.user.currentUser);
   const [initializing, setInitializing] = useState(true);
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     getUserProducts(_id).then(({ data }) => {
       setProducts([...data]);

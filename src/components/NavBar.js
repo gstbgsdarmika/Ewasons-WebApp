@@ -5,15 +5,33 @@ import {
   FaList,
 } from 'react-icons/fa';
 
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import Dropdown from 'react-bootstrap/Dropdown';
 import logo from '../assets/img/logo.svg';
 import indonesia from '../assets/img/indonesia.png';
+import { logoutFailure, logoutStart, logoutSuccess } from '../redux/userRedux';
+import { putAccessToken } from '../utils/api';
+import { resetCart } from '../redux/cartRedux';
 
 function NavBar() {
   const cartQuantity = useSelector((state) => state.cart.quantity);
   const authedUser = useSelector((state) => state.user.currentUser);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function onLogout() {
+    try {
+      dispatch(logoutStart());
+      putAccessToken('');
+    } catch (error) {
+      dispatch(logoutFailure());
+    }
+    putAccessToken('');
+    navigate('/login');
+    dispatch(logoutSuccess());
+    dispatch(resetCart());
+  }
 
   return (
     <div className="header">
@@ -53,9 +71,9 @@ function NavBar() {
                         </div>
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
-                        <Dropdown.Item className="category-link" href="/profile">Akun Saya</Dropdown.Item>
-                        <Dropdown.Item className="category-link" href="#/action-2">Pesanan Saya</Dropdown.Item>
-                        <Dropdown.Item className="category-link" href="#/action-3">Keluar</Dropdown.Item>
+                        <Link className="category-link dropdown-item fw-semibold" to="/profile">Akun Saya</Link>
+                        <Link className="category-link dropdown-item fw-semibold" to="#/">Pesanan Saya</Link>
+                        <button type="button" className="category-link dropdown-item fw-semibold text-danger" onClick={onLogout}>Keluar</button>
                       </Dropdown.Menu>
                     </Dropdown>
                   </div>
