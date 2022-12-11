@@ -1378,3 +1378,9 @@ td img {
   font-weight: 600;
 }
 
+/* Propile User Page */
+.profile-user {
+  padding-top: 125px;
+  overflow-x: hidden;
+}
+
