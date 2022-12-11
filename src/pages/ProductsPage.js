@@ -13,7 +13,7 @@ function ProductsPage() {
   const [products, setProducts] = useState([]);
   const [sort, setSort] = useState('');
   const [category] = React.useState(() => searchParams.get('category') || '');
-  const [initializing, setInitializing] = React.useState(true);
+  const [initializing, setInitializing] = useState(true);
 
   useEffect(() => {
     getProducts(category).then(({ data }) => {

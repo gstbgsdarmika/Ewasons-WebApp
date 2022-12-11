@@ -358,6 +358,9 @@
 
 .product-card .product-img img{
   border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 247px;
+  object-fit: cover;
 }
 
 .product-card .product-info {
@@ -1346,6 +1349,16 @@ td img {
   width: 100%;
 }
 
+.img-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-preview img {
+  width: 200px;
+}
+
 .modal-header .btn-close{
   display: none;
 }
@@ -1364,3 +1377,4 @@ td img {
   font-size: 24px;
   font-weight: 600;
 }
+
