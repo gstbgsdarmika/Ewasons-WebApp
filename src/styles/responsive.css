@@ -627,4 +627,13 @@
     width: 40px;
     height: 40px;
   }
+
+  .profile-admin {
+    padding-top: 125px;
+    overflow-x: hidden;
+  }
+  
+  .sidebar nav {
+    padding-top: 0;
+  }
 }
