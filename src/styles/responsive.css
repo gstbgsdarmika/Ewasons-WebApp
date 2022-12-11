@@ -1,44 +1,51 @@
 @media screen and (max-width: 575.98px) {
-  .item-header-1 {
-    position: relative;
-  }
-
-  .item-header-1 .logo h1 {
+  /* Navbar */
+  .item-header-1 .navbar-logo {
     display: none;
-  }
-
-  .item-header-1 .logo .img-ewasons {
-    display: none;
-  }
-
-  .item-header-1 .wrap-search {
-    position: absolute;
-    width: 65%;
   }
 
   .item-header-1 .wrap-search .wrap-icon-search {
     width: 15%;
   }
 
-  .item-header-1 .wrap-icon-shop svg {
-    margin-right: 30px;
-    font-size: 26px;
+  .item-header-1 .wrap-search {
+    width: 100%;
   }
 
-  .item-header-1 .line {
-    display: none;
+  .item-header-1 .wrap-search .form-control {
+    width: 100%;
   }
 
-  .item-header-1 .authentication-button button {
-    display: none;
+  .item-header-1 .wrap-search .wrap-icon-search {
+    left: 0;
+    width: 20%;
+  }
+
+  .item-header-1 .wrap-search .form-control::placeholder {
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .auth-button {
+    margin-left: 10px;
   }
 
   .hero {
     display: none;
   }
 
-  .category-content {
+  .hero-mobile {
     padding-top: 150px;
+    display: block;
+  }
+
+  .carousel-item {
+    width: 311px;
+    height: 260px;
+  }
+
+  .category-content {
+    padding-top: 50px;
   }
 
   /* login page */
@@ -114,6 +121,163 @@
     height: 10px;
     right: 0;
     top: 0;
+  }
+
+  /* sidebar */
+  .ps-menu-root {
+    display: block;
+  }
+
+  .sidebar nav {
+    padding-top: 130px;
+  }
+
+  .sidebar-button {
+    margin-top: -20px;
+  }
+
+  .sb-button {
+    position: absolute;
+    background-color: #254779;
+    color: #fff;
+    font-size: 24px;
+    border: transparent;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    right: 10px;
+  }
+
+  /* Address Page */
+  .address-input .header-address h1 {
+    font-size: 18px;
+  }
+
+  .address-input .header-address button {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+
+  .address-input .main-address {
+    padding: 15px;
+  }
+
+  .address-input .main-address h1 {
+    font-size: 16px;
+    padding-top: 10px;
+  }
+
+  .main-address h1 {
+    font-size: 14px;
+  }
+
+  .main-address .address-user h2 {
+    font-size: 16px;
+  }
+
+  .main-address .address-user span {
+    font-size: 12px;
+  }
+
+  .main-address .address-user h3 {
+    font-size: 14px;
+  }
+
+  .main-address .address-user .active {
+    font-size: 14px;
+  }
+
+  .main-address .address-user button {
+    font-size: 14px;
+  }
+
+  .main-address .address-map h2 {
+    font-size: 16px;
+  }
+
+  .main-address .address-map button {
+    font-size: 12px;
+  }
+
+  /* Product State Page */
+  .product-state {
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .product-state .product-state-header {
+    margin-bottom: 10px;
+    padding: 8px 0;
+  }
+
+  .product-state-header h1 {
+    font-size: 16px;
+  }
+
+  .card-product-state {
+    border-bottom: 1px solid var(--icon);
+    margin-bottom: 15px;
+  }
+
+  .main-product-state .card-product-state .product-img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+
+  .main-product-state .card-product-state .product-img img {
+    width: 100%;
+  }
+
+  .main-product-state .card-product-state .product-info h1 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .main-product-state .card-product-state .product-info p {
+    font-size: 12px;
+  }
+
+  .main-product-state .card-product-state .action button {
+    font-size: 12px;
+  }
+
+  /* Promo Product Page */
+  .promo-product {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .promo-product-header h1 {
+    font-size: 16px;
+  }
+
+  .main-promo-product .card-promo-product .product-img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+
+  .main-promo-product .card-promo-product .product-info h1 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .main-promo-product .card-promo-product .product-info p {
+    font-size: 12px;
+  }
+
+  .main-promo-product .card-promo-product .action button {
+    font-size: 12px;
+  }
+
+  /* Admin Product Page*/
+  .admin-product {
+    overflow-x: scroll;
+  }
+
+  .list-product {
+    font-size: 12px;
   }
 }
 
@@ -214,6 +378,161 @@
     height: 20px;
     right: -10px;
     top: -10px;
+  }
+
+  /* sidebar */
+  .ps-menu-root {
+    display: block;
+  }
+
+  .sidebar nav {
+    padding-top: 130px;
+  }
+
+  .sidebar-button {
+    margin-top: -20px;
+  }
+
+  .sb-button {
+    position: absolute;
+    background-color: #254779;
+    color: #fff;
+    font-size: 24px;
+    border: transparent;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    right: 10px;
+  }
+
+  /* Address Page */
+  .address-input .header-address h1 {
+    font-size: 20px;
+  }
+
+  .address-input .header-address button {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+
+  .address-input .main-address {
+    padding: 15px;
+  }
+
+  .address-input .main-address h1 {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+
+  .main-address h1 {
+    font-size: 16px;
+  }
+
+  .main-address .address-user h2 {
+    font-size: 18px;
+  }
+
+  .main-address .address-user span {
+    font-size: 14px;
+  }
+
+  .main-address .address-user h3 {
+    font-size: 16px;
+  }
+
+  .main-address .address-user .active {
+    font-size: 14px;
+  }
+
+  .main-address .address-user button {
+    font-size: 14px;
+  }
+
+  .main-address .address-map h2 {
+    font-size: 16px;
+  }
+
+  .main-address .address-map button {
+    font-size: 14px;
+  }
+
+  /* Product State Page */
+  .product-state {
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  .product-state .product-state-header {
+    margin-bottom: 10px;
+    padding: 8px 0;
+  }
+
+  .product-state-header h1 {
+    font-size: 16px;
+  }
+
+  .card-product-state {
+    border-bottom: 1px solid var(--icon);
+    margin-bottom: 20px;
+  }
+
+  .main-product-state .card-product-state .product-img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+
+  .main-product-state .card-product-state .product-info h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .main-product-state .card-product-state .product-info p {
+    font-size: 14px;
+  }
+
+  .main-product-state .card-product-state .action button {
+    font-size: 12px;
+  }
+
+  /* Promo Product Page */
+  .promo-product {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .promo-product-header h1 {
+    font-size: 16px;
+  }
+
+  .main-promo-product .card-promo-product .product-img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+
+  .main-promo-product .card-promo-product .product-info h1 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .main-promo-product .card-promo-product .product-info p {
+    font-size: 14px;
+  }
+
+  .main-promo-product .card-promo-product .action button {
+    font-size: 14px;
+  }
+
+  /* Admin Product Page*/
+  .list-product {
+    padding-top: -120px;
+    font-size: 14px;
+  }
+
+  td .btn {
+    font-size: 12px;
+    margin-bottom: 12px;
   }
 }
 
