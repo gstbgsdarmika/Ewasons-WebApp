@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+<h1 align="center">EwaSons</h1>
+<p align="center">
+    <img width="150px" src="src/assets/img/logo.svg" alt="Program Card">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Kemunculan EwaSons
+Perkembangan teknologi ditandai dari semakin banyak produk elektronik yang dihasilkan. Hal ini membuat masa pakai perangkat elektronik semakin pendek dan dampak dari hal tersebut menyebabkan peningkatan sampah elektronik. Electronic Waste atau yang lebih dikenal dengan limbah elektronik merupakan barang-barang elektronik atau listrik yang sudah memasuki masa akhir pakai dan siap digantikan dengan barang barang baru yang lebih canggih dan dikhawatirkan dapat mengganggu kesehatan manusia ataupunkerusakan lingkungan.Solusi yang kami tawarkan berdasarkan permasalahan tersebut yaitu menciptakan website EwaSons.
 
-## Available Scripts
+## Apa itu EwaSons?
+EwaSons merupakan website yang dapat membantu masyarakat dalam mengelola sampah elektronik. Sampah elektronik yang dimaksud disini adalah barang-barang elektronik yang sudah tidak berfungsi lagi atau tidak digunakan lagi seperti bola lampu pijar, baterai, handphone, laptop dan barang elektronik lainnya. Tujuan dari website EwaSons yaitu untuk meningkatkan kontribusi masyarakat dalam menanggulangi permasalahan limbah sehingga dapat membantu menjaga lingkungan di sekitar kita. Selain itu, melalui aplikasi ini juga pengguna dapat menambah pemasukan dari sampah elektronik yang sudah tak terpakai.
 
-In the project directory, you can run:
+## Alur EwaSons
+* Mengempulkan Sampah\
+  Kumpulkan sampah elektronik yang sudah tidak terpakai,sampah elektronik dapat berupa bola lampu pijar, baterai, handphone, laptop dan barang elektronik lainnya.
+* Menjual Sampah\
+  Kumpulkan sampah atau barang elektronik yang tidak terpakai yang Anda miliki kemudian urutkan berdasarkan jenisnya, lalu unggah pada webiste EwaSon untuk menjual   barang elektronik bekas. Penjual di sekitar Anda akan memesan untuk membeli barang elektronik bekas yang Anda miliki.
+* Mendapatkan Point\
+Dengan menjual sampah dengan aplikasi EwaSons, Anda dapat menjual sampah dengan harga sesuai dengan harga yang Anda inginkan. Setelah pembeli membeli sampah Anda, uang yang Anda terima berupa poin yang nantinya bisa ditukarkan dengan berbagai penawaran menarik.
 
-### `npm start`
+## Cobain EwaSons
+Kalo kamu mau cobain aplikasi EwaSons, bukan mau liat source atau yang lainnya, silahkan ke [website EwaSons](https://master--spiffy-macaron-11dfbb.netlify.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Akun yang dapat digunakan
+email: erdonauz@gmail.com \
+password : pras17
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Resource yang dipakai
+- [React Js](https://reactjs.org/) - Library JavaScript yang digunakan dalam proses pengembangan aplikasi web EwaSons
+- [Boostrap 5](https://getbootstrap.com/) - Framework CSS yang dapat digunakan untuk membuat tampilan web EwaSons
+- [Figma](https://figma.com) - Membuat design dan prototipe UI EwaSons
+- [Google Fonts](https://pub.dev/packages/google_fonts) - Gaya font modern dan menarik
+- [Freepik](https://freepik.com/) - Sumber gambar dan icon yang digunakan untuk mendukung tampilan 
+- [MongoDB](https://www.mongodb.com/home) - Software sistem database web EwaSons
+- [JWT](https://jwt.io/) - Pengemabangan fitur Autentikasi akun.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Backend 
+Repository Api (https://github.com/prs3co/ewasons-web-api)
 
-### `npm run build`
+## Screenshot Tampilan Aplikasi
+<p align="center">
+    <img src="src/assets/img/Home.png" alt="Program">
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Didukung Oleh
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Dicoding Indonesia
