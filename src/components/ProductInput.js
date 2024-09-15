@@ -133,7 +133,7 @@ function ProductInput() {
                   />
                 </div>
               ) : (
-                'Masuk'
+                'Tambah Produk'
               )}
             </Button>
           </div>
