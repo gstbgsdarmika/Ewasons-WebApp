@@ -18,7 +18,7 @@ EwaSons merupakan website yang dapat membantu masyarakat dalam mengelola sampah 
 Dengan menjual sampah dengan aplikasi EwaSons, Anda dapat menjual sampah dengan harga sesuai dengan harga yang Anda inginkan. Setelah pembeli membeli sampah Anda, uang yang Anda terima berupa poin yang nantinya bisa ditukarkan dengan berbagai penawaran menarik.
 
 ## Cobain EwaSons
-Kalo kamu mau cobain aplikasi EwaSons, bukan mau liat source atau yang lainnya, silahkan ke [website EwaSons](https://master--spiffy-macaron-11dfbb.netlify.app/)
+Kalo kamu mau cobain aplikasi EwaSons, bukan mau liat source atau yang lainnya, silahkan ke [website EwaSons](https://ewasons.netlify.app)
 
 ## Akun yang dapat digunakan
 email: erdonauz@gmail.com \
