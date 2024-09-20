@@ -10,7 +10,7 @@ import {
 } from '../redux/userRedux';
 
 /* eslint-disable no-alert */
-const BASE_URL = 'https://mysterious-wear-fox.cyclic.app/api';
+const BASE_URL = 'https://ewasons-web-api.vercel.app/api';
 
 function getAccessToken() {
   return localStorage.getItem('accessToken');
